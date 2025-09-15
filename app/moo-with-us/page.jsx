@@ -10,14 +10,12 @@ export default function MooWithUs() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white pt-16">
         <MooHeroSection />
         <WhyMooSection />
         <CowGallery />
         <MooImpactSection />
         <MooCTASection />
         <Footer />
-      </main>
     </>
   );
 }
