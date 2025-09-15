@@ -3,101 +3,157 @@ import { useState, useEffect } from 'react'
 
 const HeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const words = ['Compassion', 'Service', 'Kindness', 'Hope', 'Unity']
-  const [currentWordIndex, setCurrentWordIndex] = useState(0)
+  const [isLoaded, setIsLoaded] = useState(false)
 
   const slides = [
     {
       id: 1,
-      image: "/hero-section.png",
-      caption: "Serving smiles through community outreach and education."
+      image: "/hero-section.png"
     },
+    {
+      id: 2,
+      image: "/hero-section1.jpg"
+    },
+    {
+      id: 3,
+      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    }
   ]
 
-  // Auto background slide change
+  // Auto background slide change (6s)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 6000)
     return () => clearInterval(timer)
+  }, [slides.length])
+
+  // Loading animation
+  useEffect(() => {
+    const loadTimer = setTimeout(() => setIsLoaded(true), 500)
+    return () => clearTimeout(loadTimer)
   }, [])
 
-  // Auto rotating words
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length)
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [words.length])
-
   return (
-    <section className="relative h-[75vh] md:h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
       {/* Background Slides */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            className={`absolute inset-0 transition-all duration-2000 ease-in-out ${
+              index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
             }`}
           >
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-[#005f60]/30" />
-            <div className="absolute inset-0 bg-black/40" />
+            {/* Elegant Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#67391C]/10 via-transparent to-[#A37E62]/10" />
           </div>
         ))}
+      </div>
+
+      {/* Floating Geometric Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-2 h-2 bg-white/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-1 h-1 bg-white/30 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-40 left-20 w-3 h-3 bg-white/10 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute top-1/3 left-1/4 w-px h-16 bg-white/20 rotate-45"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-px h-12 bg-white/20 rotate-12"></div>
       </div>
 
       {/* Main Content */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
         
         {/* Site Name */}
-        <h1 
-          className="text-5xl md:text-6xl lg:text-8xl font-bold mb-4 text-white drop-shadow-lg"
-          style={{ fontFamily: "var(--font-aldrich)" }}
-        >
-          DBV Foundation
-        </h1>
+        <div className={`transition-all duration-1000 delay-300 ${
+          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <h1 
+            className="text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-light mb-6 text-white tracking-wider md:pt-30"
+            style={{ 
+              fontFamily: "var(--font-aldrich)",
+              textShadow: '2px 2px 20px rgba(0,0,0,0.5), 0 0 40px rgba(255,255,255,0.1)'
+            }}
+          >
+            DBV FOUNDATION
+          </h1>
+        </div>
         
-        {/* Since */}
-        <p 
-          className="text-xl md:text-xl text-gray-200 mb-6"
-          style={{ fontFamily: "var(--font-cantata)" }}
-        >
-          Coimbatore | Since 2014
-        </p>
+        {/* Decorative Line */}
+        <div className={`w-24 h-px bg-gradient-to-r from-transparent via-white to-transparent mb-8 transition-all duration-1000 delay-500 ${
+          isLoaded ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+        }`}></div>
+        
+        {/* Info Row */}
+        <div className={`flex items-center justify-center gap-8 md:gap-12 mb-8 transition-all duration-1000 delay-700 ${
+          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}>
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 bg-white/60 rounded-full"></div>
+            <p className="text-white/90 text-sm md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
+              Coimbatore
+            </p>
+          </div>
+          <div className="w-px h-6 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 bg-white/60 rounded-full"></div>
+            <p className="text-white/90 text-sm md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
+              Since 2009
+            </p>
+          </div>
+        </div>
         
         {/* Tagline */}
-        <p 
-          className="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl mx-auto"
-          style={{ fontFamily: "var(--font-cantata)" }}
-        >
-          "Dedicated to serving humanity with compassion and creating positive change in our communities"
-        </p>
-        
-        {/* Rotating Words */}
-        <div className="h-16 flex items-center justify-center">
-          <span 
-            className="text-3xl md:text-4xl font-bold text-green-400 transition-all duration-500 transform"
-            style={{ fontFamily: "var(--font-aldrich)" }}
-            key={currentWordIndex}
+        <div className={`transition-all duration-1000 delay-900 ${
+          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}>
+          <p 
+            className="text-lg md:text-xl lg:text-2xl text-white/90 mb-16 max-w-4xl mx-auto font-light leading-relaxed"
+            style={{ 
+              fontFamily: "var(--font-cantata)",
+              textShadow: '1px 1px 10px rgba(0,0,0,0.5)',
+              lineHeight: '1.6'
+            }}
           >
-            {words[currentWordIndex]}
-          </span>
+            Dedicated to serving humanity with compassion and creating positive change in our communities
+          </p>
         </div>
-
-        {/* Caption from slides */}
-        <p className="mt-6 text-white text-base sm:text-lg max-w-2xl" style={{ fontFamily: 'var(--font-cantata)' }}>
-          {slides[currentSlide].caption}
-        </p>
       </div>
 
-      {/* 🌟 Static Glowing Orb */}
-      <div className="absolute top-32 right-24 z-10">
-        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#fff3e0] to-[#6d4c41] blur-2xl opacity-25" />
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4 z-20">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`transition-all duration-500 ${
+              index === currentSlide 
+                ? 'w-12 h-1 bg-white rounded-full' 
+                : 'w-3 h-1 bg-white/40 rounded-full hover:bg-white/60'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Elegant Accent Elements */}
+      <div className="absolute top-1/4 right-16 z-10">
+        <div className="w-32 h-32 rounded-full bg-gradient-to-br from-white/5 to-transparent border border-white/10 animate-pulse"></div>
+      </div>
+      
+      <div className="absolute bottom-1/4 left-16 z-10">
+        <div className="w-24 h-24 rounded-full bg-gradient-to-tl from-[#A37E62]/20 to-transparent border border-white/10 animate-pulse delay-1000"></div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 right-8 z-20">
+        <div className="flex flex-col items-center space-y-2">
+          <div className="w-px h-8 bg-gradient-to-b from-white/60 to-transparent animate-pulse"></div>
+          <div className="w-1 h-1 bg-white/60 rounded-full animate-bounce"></div>
+        </div>
       </div>
     </section>
   )

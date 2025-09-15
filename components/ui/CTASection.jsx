@@ -32,16 +32,10 @@ const CTASection = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <button 
-              className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors"
+              className="bg-[#67391C] text-white px-15 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors"
               style={{ fontFamily: "var(--font-cantata)" }}
             >
               Join Us
-            </button>
-            <button 
-              className="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
-              style={{ fontFamily: "var(--font-cantata)" }}
-            >
-              Donate Now
             </button>
           </div>
           
