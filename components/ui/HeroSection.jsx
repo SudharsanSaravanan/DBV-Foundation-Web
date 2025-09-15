@@ -56,7 +56,7 @@ const HeroBanner = () => {
         
         {/* Site Name */}
         <h1 
-          className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white drop-shadow-lg"
+          className="text-5xl md:text-6xl lg:text-8xl font-bold mb-4 text-white drop-shadow-lg"
           style={{ fontFamily: "var(--font-aldrich)" }}
         >
           DBV Foundation
