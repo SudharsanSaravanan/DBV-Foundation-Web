@@ -58,18 +58,18 @@ const ImpactSection = () => {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="bg-green-600 py-20">
+    <section ref={sectionRef} className="bg-[#67391C] py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p
-            className="text-lg text-green-100 uppercase tracking-widest mb-4"
+            className="text-lg text-[#ffffff] uppercase tracking-widest mb-4"
             style={{ fontFamily: "var(--font-cantata)" }}
           >
             Our Impact
           </p>
           
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#E9D1B5]"
             style={{ fontFamily: "var(--font-aldrich)" }}
           >
             Making a Real Difference
@@ -80,13 +80,13 @@ const ImpactSection = () => {
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#ffffff] mb-2"
                 style={{ fontFamily: "var(--font-aldrich)" }}
               >
                 {animatedNumbers[index]}{stat.suffix}
               </div>
               <div 
-                className="text-green-100 text-sm md:text-base uppercase tracking-wide"
+                className="text-[#D5DEE3] text-sm md:text-base uppercase tracking-wide"
                 style={{ fontFamily: "var(--font-cantata)" }}
               >
                 {stat.label}

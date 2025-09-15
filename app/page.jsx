@@ -5,18 +5,18 @@ import InitiativesCarousel from '@/components/ui/InitiativesCarousel';
 import ImpactSection from '@/components/ui/ImpactSection';
 import CTASection from '@/components/ui/CTASection';
 import Footer from '@/components/ui/Footer';
+import RotatingCarousel from '@/components/ui/RotatingCarousel';
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white pt-16">
         <HeroSection />
         <AboutSection />
+        <RotatingCarousel />
         <InitiativesCarousel />
         <ImpactSection />
         <CTASection />
-      </main>
       <Footer />
     </>
   );
