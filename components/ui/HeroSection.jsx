@@ -8,14 +8,10 @@ const HeroBanner = () => {
   const slides = [
     {
       id: 1,
-      image: "/hero-section.png"
-    },
-    {
-      id: 2,
       image: "/hero-section1.jpg"
     },
     {
-      id: 3,
+      id: 2,
       image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
     }
   ]
@@ -49,20 +45,13 @@ const HeroBanner = () => {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
+            {/* Translucent Grey Overlay */}
+            <div className="absolute inset-0 bg-gray-900/35" />
             {/* Elegant Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#67391C]/10 via-transparent to-[#A37E62]/10" />
           </div>
         ))}
-      </div>
-
-      {/* Floating Geometric Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-white/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-1 h-1 bg-white/30 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-40 left-20 w-3 h-3 bg-white/10 rounded-full animate-pulse delay-500"></div>
-        <div className="absolute top-1/3 left-1/4 w-px h-16 bg-white/20 rotate-45"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-px h-12 bg-white/20 rotate-12"></div>
       </div>
 
       {/* Main Content */}
@@ -82,11 +71,6 @@ const HeroBanner = () => {
             DBV FOUNDATION
           </h1>
         </div>
-        
-        {/* Decorative Line */}
-        <div className={`w-24 h-px bg-gradient-to-r from-transparent via-white to-transparent mb-8 transition-all duration-1000 delay-500 ${
-          isLoaded ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-        }`}></div>
         
         {/* Info Row */}
         <div className={`flex items-center justify-center gap-8 md:gap-12 mb-8 transition-all duration-1000 delay-700 ${
@@ -137,15 +121,6 @@ const HeroBanner = () => {
             }`}
           />
         ))}
-      </div>
-
-      {/* Elegant Accent Elements */}
-      <div className="absolute top-1/4 right-16 z-10">
-        <div className="w-32 h-32 rounded-full bg-gradient-to-br from-white/5 to-transparent border border-white/10 animate-pulse"></div>
-      </div>
-      
-      <div className="absolute bottom-1/4 left-16 z-10">
-        <div className="w-24 h-24 rounded-full bg-gradient-to-tl from-[#A37E62]/20 to-transparent border border-white/10 animate-pulse delay-1000"></div>
       </div>
 
       {/* Scroll Indicator */}
