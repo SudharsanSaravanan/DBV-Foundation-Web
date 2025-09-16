@@ -17,7 +17,6 @@ const InitiativesCarousel = () => {
       link: "/moo-with-us",
       hasDetailedPage: true,
       bgImage: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1200&h=800&fit=crop",
-      overlayColor: "bg-transparent", // No overlay for this initiative
       iconColor: "text-green-100"
     },
     {
@@ -28,7 +27,6 @@ const InitiativesCarousel = () => {
       link: null,
       hasDetailedPage: false,
       bgImage: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      overlayColor: "bg-transparent",
       iconColor: "text-orange-100"
     },
     {
@@ -39,7 +37,6 @@ const InitiativesCarousel = () => {
       link: null,
       hasDetailedPage: false,
       bgImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80",
-      overlayColor: "bg-transparent",
       iconColor: "text-blue-100"
     }
   ];
@@ -98,9 +95,8 @@ const InitiativesCarousel = () => {
                       backgroundImage: `url(${initiative.bgImage})`,
                     }}
                   />
-                  
-                  {/* Overlay */}
-                  <div className={`absolute inset-0 ${initiative.overlayColor}`} />
+                  {/* Translucent Grey Overlay */}
+                  <div className="absolute inset-0 bg-gray-900/35" />
                   
                   {/* Content */}
                   <div className="relative z-10 p-12 md:p-16 text-center h-[500px] flex flex-col justify-center">
@@ -142,12 +138,6 @@ const InitiativesCarousel = () => {
                       <div> </div>
                     )}
                   </div>
-
-                  {/* Decorative Elements */}
-                  <div className="absolute top-8 left-8 w-20 h-20 border-2 border-white/20 rounded-full animate-pulse"></div>
-                  <div className="absolute bottom-8 right-8 w-16 h-16 border-2 border-white/20 rounded-full animate-pulse delay-1000"></div>
-                  <div className="absolute top-1/4 right-16 w-6 h-6 bg-white/10 rounded-full animate-bounce delay-500"></div>
-                  <div className="absolute bottom-1/4 left-16 w-8 h-8 bg-white/10 rounded-full animate-bounce delay-700"></div>
                 </div>
               ))}
             </div>
@@ -185,30 +175,8 @@ const InitiativesCarousel = () => {
               </button>
             ))}
           </div>
-
-          {/* Pause Indicator */}
-          {isPaused && (
-            <div className="absolute top-4 right-4 bg-black/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
-              💖
-            </div>
-          )}
         </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-4 h-4 rounded-full animate-float" style={{ backgroundColor: '#A37E62' }}></div>
-        <div className="absolute top-40 right-20 w-6 h-6 rounded-full animate-float delay-1000" style={{ backgroundColor: '#C49E75' }}></div>
-        <div className="absolute bottom-20 left-1/4 w-3 h-3 rounded-full animate-float delay-500" style={{ backgroundColor: '#E9D1B5' }}></div>
       </div>
-
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 };
