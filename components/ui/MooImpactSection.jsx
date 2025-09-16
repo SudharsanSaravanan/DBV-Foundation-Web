@@ -58,12 +58,12 @@ const MooImpactSection = () => {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="bg-white py-20">
+    <section ref={sectionRef} className="py-20" style={{ backgroundColor: 'white' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p
-            className="text-lg text-green-600 uppercase tracking-widest mb-4"
-            style={{ fontFamily: "var(--font-cantata)" }}
+            className="text-lg uppercase tracking-widest mb-4"
+            style={{ fontFamily: "var(--font-cantata)", color: "#8B6F47" }}
           >
             Our Impact
           </p>
@@ -72,10 +72,10 @@ const MooImpactSection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8"
             style={{
               fontFamily: "var(--font-aldrich)",
-              color: "#0E141C",
+              color: "black",
             }}
           >
-            Moo With Us in Numbers
+            Our Impact in Numbers
           </h2>
         </div>
 
@@ -83,14 +83,14 @@ const MooImpactSection = () => {
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-green-600 mb-2"
-                style={{ fontFamily: "var(--font-aldrich)" }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
+                style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
               >
                 {animatedNumbers[index]}{stat.suffix}
               </div>
               <div 
-                className="text-gray-600 text-sm md:text-base uppercase tracking-wide"
-                style={{ fontFamily: "var(--font-cantata)" }}
+                className="text-sm md:text-base uppercase tracking-wide"
+                style={{ fontFamily: "var(--font-cantata)", color: "black" }}
               >
                 {stat.label}
               </div>
@@ -100,15 +100,15 @@ const MooImpactSection = () => {
 
         {/* Impact Stories */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-green-50 p-6 rounded-xl">
+          <div className="p-6 rounded-xl" style={{ backgroundColor: '#C49E75' }}>
             <h4 
-              className="text-xl font-bold mb-4 text-green-800"
-              style={{ fontFamily: "var(--font-aldrich)" }}
+              className="text-xl font-bold mb-4"
+              style={{ fontFamily: "var(--font-aldrich)", color: "#fff5ef" }}
             >
               Rescue & Rehabilitation
             </h4>
             <p 
-              className="text-gray-700"
+              className="text-[#fff5ef]"
               style={{ fontFamily: "var(--font-cantata)" }}
             >
               We have successfully rescued and rehabilitated over 150 cows from dangerous situations, 
@@ -116,15 +116,15 @@ const MooImpactSection = () => {
             </p>
           </div>
           
-          <div className="bg-blue-50 p-6 rounded-xl">
+          <div className="p-6 rounded-xl" style={{ backgroundColor: '#C49E75' }}>
             <h4 
-              className="text-xl font-bold mb-4 text-blue-800"
-              style={{ fontFamily: "var(--font-aldrich)" }}
+              className="text-xl font-bold mb-4"
+              style={{ fontFamily: "var(--font-aldrich)", color: "#fff5ef" }}
             >
               Community Engagement
             </h4>
             <p 
-              className="text-gray-700"
+              className="text-[#fff5ef]"
               style={{ fontFamily: "var(--font-cantata)" }}
             >
               Our volunteer program has grown to include over 75 dedicated individuals who contribute 
@@ -132,15 +132,15 @@ const MooImpactSection = () => {
             </p>
           </div>
           
-          <div className="bg-yellow-50 p-6 rounded-xl">
+          <div className="p-6 rounded-xl" style={{ backgroundColor: '#C49E75' }}>
             <h4 
-              className="text-xl font-bold mb-4 text-yellow-800"
-              style={{ fontFamily: "var(--font-aldrich)" }}
+              className="text-xl font-bold mb-4"
+              style={{ fontFamily: "var(--font-aldrich)", color: "#fff5ef" }}
             >
               Sustainable Impact
             </h4>
             <p 
-              className="text-gray-700"
+              className="text-[#fff5ef]"
               style={{ fontFamily: "var(--font-cantata)" }}
             >
               The milk donated by our healthy cows has been distributed to over 200 families in need, 

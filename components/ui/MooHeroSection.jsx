@@ -49,6 +49,9 @@ const MooHeroBanner = () => {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
+            {/* Translucent Grey Overlay */}
+            <div className="absolute inset-0 bg-gray-900/35" />
+            
             {/* Dark overlay for better text readability */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
           </div>
