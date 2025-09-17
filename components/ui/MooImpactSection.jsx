@@ -7,10 +7,10 @@ const MooImpactSection = () => {
   const sectionRef = useRef(null);
 
   const stats = [
-    { number: 150, label: "Cows Sheltered", suffix: "+" },
-    { number: 75, label: "Volunteers Active", suffix: "+" },
-    { number: 8000, label: "Litres Milk Donated", suffix: "+" },
-    { number: 6, label: "Years of Service", suffix: "+" }
+    { number: 60, label: "Cows Rescued", suffix: "+" },
+    { number: 10, label: "Bulls Protected", suffix: "+" },
+    { number: 10, label: "Calves Nurtured", suffix: "+" },
+    { number: 4, label: "Years of Service", suffix: "+" }
   ];
 
   const [animatedNumbers, setAnimatedNumbers] = useState(stats.map(() => 0));
@@ -75,7 +75,7 @@ const MooImpactSection = () => {
               color: "black",
             }}
           >
-            Our Impact in Numbers
+            Creating a Tail of Happiness
           </h2>
         </div>
 
@@ -96,57 +96,6 @@ const MooImpactSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Impact Stories */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="p-6 rounded-xl" style={{ backgroundColor: '#C49E75' }}>
-            <h4 
-              className="text-xl font-bold mb-4"
-              style={{ fontFamily: "var(--font-aldrich)", color: "#fff5ef" }}
-            >
-              Rescue & Rehabilitation
-            </h4>
-            <p 
-              className="text-[#fff5ef]"
-              style={{ fontFamily: "var(--font-cantata)" }}
-            >
-              We have successfully rescued and rehabilitated over 150 cows from dangerous situations, 
-              providing them with medical care, proper nutrition, and a safe environment to recover.
-            </p>
-          </div>
-          
-          <div className="p-6 rounded-xl" style={{ backgroundColor: '#C49E75' }}>
-            <h4 
-              className="text-xl font-bold mb-4"
-              style={{ fontFamily: "var(--font-aldrich)", color: "#fff5ef" }}
-            >
-              Community Engagement
-            </h4>
-            <p 
-              className="text-[#fff5ef]"
-              style={{ fontFamily: "var(--font-cantata)" }}
-            >
-              Our volunteer program has grown to include over 75 dedicated individuals who contribute 
-              their time, skills, and resources to support our cow welfare mission.
-            </p>
-          </div>
-          
-          <div className="p-6 rounded-xl" style={{ backgroundColor: '#C49E75' }}>
-            <h4 
-              className="text-xl font-bold mb-4"
-              style={{ fontFamily: "var(--font-aldrich)", color: "#fff5ef" }}
-            >
-              Sustainable Impact
-            </h4>
-            <p 
-              className="text-[#fff5ef]"
-              style={{ fontFamily: "var(--font-cantata)" }}
-            >
-              The milk donated by our healthy cows has been distributed to over 200 families in need, 
-              creating a sustainable cycle of giving back to the community.
-            </p>
-          </div>
         </div>
       </div>
     </section>

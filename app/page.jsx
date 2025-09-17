@@ -1,4 +1,4 @@
-import Header from '@/components/ui/Header';
+import Header1 from '@/components/ui/Header1';
 import HeroSection from '@/components/ui/HeroSection';
 import AboutSection from '@/components/ui/AboutSection';
 import InitiativesCarousel from '@/components/ui/InitiativesCarousel';
@@ -10,7 +10,7 @@ import RotatingCarousel from '@/components/ui/RotatingCarousel';
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header1 />
         <HeroSection />
         <AboutSection />
         <RotatingCarousel />

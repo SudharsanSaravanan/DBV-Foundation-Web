@@ -7,10 +7,10 @@ const ImpactSection = () => {
   const sectionRef = useRef(null);
 
   const stats = [
-    { number: 500, label: "Families Fed", suffix: "+" },
+    { number: 13322, label: "People Fed", suffix: "+" },
     { number: 200, label: "Children Educated", suffix: "+" },
-    { number: 150, label: "Cows Sheltered", suffix: "+" },
-    { number: 10, label: "Years of Service", suffix: "+" }
+    { number: 80, label: "Cows Sheltered", suffix: "+" },
+    { number: 19, label: "Years of Service", suffix: "+" }
   ];
 
   const [animatedNumbers, setAnimatedNumbers] = useState(stats.map(() => 0));

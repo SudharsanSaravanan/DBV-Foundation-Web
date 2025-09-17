@@ -31,13 +31,13 @@ const AboutSection = () => {
               className="text-xl leading-relaxed max-w-4xl mx-auto font-light"
               style={{ fontFamily: "var(--font-cantata)", color: "#555", lineHeight: "1.8" }}
             >
-              The <span className="font-semibold text-[#67391C]">DBV Foundation</span> is committed to
-              transforming lives through compassion, empathy, and service. Since 2009, we have been
-              working tirelessly to uplift communities by focusing on three core areas:
-              <span className="text-[#67391C] font-medium"> education, food security, and animal
-              welfare</span>. Our efforts are rooted in the belief that every child deserves the
-              opportunity to dream, every family has the right to food, and every animal should be
-              treated with kindness and dignity.
+              The <span className="font-semibold text-[#67391C]">DBV Foundation</span> has been
+              transforming lives through compassion, empathy, and service since our establishment.
+              Our journey began with <span className="text-[#67391C] font-medium">education for children in 2006</span>,
+              expanded to <span className="text-[#67391C] font-medium">animal welfare with "Moo With Us" in 2021</span>,
+              and launched our <span className="text-[#67391C] font-medium">"Food for All" program on 20th August 2023</span>.
+              We believe that every child deserves quality education, every family has the right to
+              nutritious food, and every animal should be treated with kindness and dignity.
             </p>
           </div>
 
@@ -58,11 +58,11 @@ const AboutSection = () => {
                   className="text-gray-600 leading-relaxed font-light"
                   style={{ fontFamily: "var(--font-cantata)", lineHeight: "1.7" }}
                 >
-                  To create a world where every child's aspirations are nurtured through quality
-                  education, no individual goes to bed hungry, and all animals — especially cows — are
-                  treated with reverence and care. We envision communities built on
+                  To create a world where every child's potential is unlocked through quality education,
+                  no individual experiences hunger, and all animals — especially cows — are treated
+                  with reverence and care. We envision communities built on
                   <span className="text-[#67391C] font-medium"> empathy, inclusivity, and sustainability</span>,
-                  where kindness becomes the foundation of progress and harmony.
+                  where kindness becomes the foundation of progress and harmony between humans and nature.
                 </p>
               </div>
             </div>
@@ -82,12 +82,12 @@ const AboutSection = () => {
                   className="text-gray-600 leading-relaxed font-light"
                   style={{ fontFamily: "var(--font-cantata)", lineHeight: "1.7" }}
                 >
-                  To deliver sustainable programs that empower children with dream-driven education,
-                  provide nutritious meals to underprivileged families, and establish sanctuaries for
-                  animals in need. Through <span className="text-[#67391C] font-medium">community
-                  participation, volunteer engagement, and innovative initiatives</span>, we aim to
-                  drive long-term impact and inspire a culture of compassion that uplifts society as a
-                  whole.
+                  To deliver impactful programs that empower underprivileged children through education,
+                  provide wholesome meals to families in need every Monday, and offer comprehensive
+                  care for cows including food, shelter, and medical assistance. Through
+                  <span className="text-[#67391C] font-medium"> community engagement, dedicated service,
+                  and innovative approaches</span>, we create lasting change that promotes harmony
+                  between humans and animals while addressing fundamental social needs.
                 </p>
               </div>
             </div>
@@ -122,7 +122,8 @@ const AboutSection = () => {
                 className="text-gray-600 font-light leading-relaxed"
                 style={{ fontFamily: "var(--font-cantata)", lineHeight: "1.6" }}
               >
-                We believe in treating every individual and animal with kindness, respect, and dignity.
+                We believe in treating every individual and animal with kindness, respect, and dignity,
+                fostering harmony between humans and nature.
               </p>
             </div>
 
@@ -132,14 +133,14 @@ const AboutSection = () => {
                 className="text-xl font-light mb-4"
                 style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
               >
-                Service
+                Consistency
               </h4>
               <p
                 className="text-gray-600 font-light leading-relaxed"
                 style={{ fontFamily: "var(--font-cantata)", lineHeight: "1.6" }}
               >
-                Through selfless service, we aim to uplift communities and address the root causes of
-                poverty and inequality.
+                Through regular service like our weekly food distribution, we ensure reliable support
+                and build trust within the communities we serve.
               </p>
             </div>
 
@@ -149,14 +150,14 @@ const AboutSection = () => {
                 className="text-xl font-light mb-4"
                 style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
               >
-                Sustainability
+                Holistic Impact
               </h4>
               <p
                 className="text-gray-600 font-light leading-relaxed"
                 style={{ fontFamily: "var(--font-cantata)", lineHeight: "1.6" }}
               >
-                Our programs are designed to create lasting impact, promoting education, food
-                security, and animal welfare for generations to come.
+                Our programs address education, nutrition, and animal welfare, creating comprehensive
+                solutions that strengthen entire communities for generations.
               </p>
             </div>
           </div>

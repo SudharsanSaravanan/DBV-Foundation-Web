@@ -11,33 +11,33 @@ const InitiativesCarousel = () => {
   const initiatives = [
     {
       id: 1,
-      title: "Moo With Us",
-      description: "Dedicated cow welfare program providing shelter, care, and protection for abandoned and injured cows. Join us in making a difference in animal welfare.",
-      icon: <Heart className="w-12 h-12" />,
-      link: "/moo-with-us",
-      hasDetailedPage: true,
-      bgImage: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1200&h=800&fit=crop",
-      iconColor: "text-green-100"
-    },
-    {
-      id: 2,
-      title: "Food For All",
-      description: "Community food distribution program ensuring no one goes hungry. We provide nutritious meals to families in need across our community.",
+      title: "Food for All",
+      description: "Launched on 20th August 2023, our food distribution program ensures that no one goes hungry. Every Monday, we provide wholesome meals to those in need. From 20.08.2023 to 31.08.2025, we have nourished 13,322 people and continue to expand our reach.",
       icon: <Utensils className="w-12 h-12" />,
       link: null,
       hasDetailedPage: false,
-      bgImage: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      bgImage: "/initiatives/serving-food.jpg",
       iconColor: "text-orange-100"
     },
     {
-      id: 3,
-      title: "Education for Underprivileged",
-      description: "Supporting educational opportunities for underprivileged children through scholarships, supplies, and mentorship programs.",
+      id: 2,
+      title: "Education for Children",
+      description: "Since 2006, we have empowered underprivileged children through quality education, mentorship, and resources, enabling them to build stronger, brighter futures.",
       icon: <BookOpen className="w-12 h-12" />,
       link: null,
       hasDetailedPage: false,
-      bgImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80",
+      bgImage: "/initiatives/children-class.jpg",
       iconColor: "text-blue-100"
+    },
+    {
+      id: 3,
+      title: "Moo With Us",
+      description: "Started in 2021, this initiative is dedicated to the care of cows, providing them with food, shelter, and medical assistance while promoting harmony between humans and animals.",
+      icon: <Heart className="w-12 h-12" />,
+      link: "/moo-with-us",
+      hasDetailedPage: true,
+      bgImage: "/initiatives/cow-calf.jpeg",
+      iconColor: "text-green-100"
     }
   ];
 
@@ -129,7 +129,7 @@ const InitiativesCarousel = () => {
                     {initiative.hasDetailedPage ? (
                       <Link 
                         href={initiative.link}
-                        className="inline-block bg-white text-gray-800 px-10 py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg font-semibold"
+                        className="inline-block bg-white text-gray-800 px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-md text-base font-semibold"
                         style={{ fontFamily: "var(--font-cantata)" }}
                       >
                         Learn More
@@ -143,36 +143,32 @@ const InitiativesCarousel = () => {
             </div>
           </div>
 
-          {/* Progress Bar */}
-          <div className="mt-8 bg-white/20 rounded-full h-2 overflow-hidden backdrop-blur-sm">
+          {/* Minimalistic Progress Bar */}
+          <div className="mt-6 bg-gray-300/30 rounded-full h-1 overflow-hidden">
             <div 
-              className="h-full bg-gradient-to-r transition-all duration-700 ease-linear"
+              className="h-full transition-all duration-700 ease-linear"
               style={{ 
                 width: `${((currentSlide + 1) / initiatives.length) * 100}%`,
-                background: 'linear-gradient(90deg, #A37E62, #67391C)'
+                backgroundColor: '#A37E62'
               }}
             />
           </div>
 
-          {/* Enhanced Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-4">
+          {/* Minimalistic Dots Indicator */}
+          <div className="flex justify-center mt-6 space-x-3">
             {initiatives.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`relative transition-all duration-300 ${
+                className={`transition-all duration-200 rounded-full ${
                   index === currentSlide 
-                    ? 'w-12 h-3 rounded-full' 
-                    : 'w-3 h-3 rounded-full hover:scale-125'
+                    ? 'w-2 h-2 opacity-100' 
+                    : 'w-2 h-2 opacity-40 hover:opacity-70'
                 }`}
                 style={{
-                  backgroundColor: index === currentSlide ? '#A37E62' : '#D5DEE3',
+                  backgroundColor: '#A37E62',
                 }}
-              >
-                {index === currentSlide && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-full animate-pulse" />
-                )}
-              </button>
+              />
             ))}
           </div>
         </div>

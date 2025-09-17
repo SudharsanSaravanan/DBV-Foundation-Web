@@ -107,7 +107,7 @@ const MooHeroBanner = () => {
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 bg-white/60 rounded-full"></div>
             <p className="text-white/90 text-sm md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
-              Since 2010
+              Since 2021
             </p>
           </div>
         </div>
@@ -123,7 +123,7 @@ const MooHeroBanner = () => {
               textShadow: '1px 1px 10px rgba(0,0,0,0.7)'
             }}
           >
-            Join us in our mission to provide shelter, care, and protection for abandoned and injured cows. 
+            Where compassion becomes action, giving cows dignity, care, and a brighter tomorrow.
             Together, we create a safe haven where these gentle creatures can live with dignity and peace.
           </p>
         </div>
