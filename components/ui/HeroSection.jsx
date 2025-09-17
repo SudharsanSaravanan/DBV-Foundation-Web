@@ -86,7 +86,7 @@ const HeroBanner = () => {
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 bg-white/60 rounded-full"></div>
             <p className="text-white/90 text-sm md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
-              Since 2009
+              Since 2004
             </p>
           </div>
         </div>
