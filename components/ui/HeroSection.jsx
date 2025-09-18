@@ -76,16 +76,16 @@ const HeroBanner = () => {
         <div className={`flex items-center justify-center gap-8 md:gap-12 mb-8 transition-all duration-1000 delay-700 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-white/60 rounded-full"></div>
-            <p className="text-white/90 text-sm md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className="w-1 h-1 md:w-2 md:h-2 bg-white/60 rounded-full mb-0.5 md:mb-0"></div>
+            <p className="text-white/90 text-[10px] md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
               Coimbatore
             </p>
           </div>
           <div className="w-px h-6 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-white/60 rounded-full"></div>
-            <p className="text-white/90 text-sm md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className="w-1 h-1 md:w-2 md:h-2 bg-white/60 rounded-full mb-0.5 md:mb-0"></div>
+            <p className="text-white/90 text-[10px] md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
               Since 2004
             </p>
           </div>
