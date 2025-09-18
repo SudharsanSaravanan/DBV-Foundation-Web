@@ -6,7 +6,7 @@ const CTASection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p
-            className="text-lg text-green-600 uppercase tracking-widest mb-4"
+            className="text-lg text-[#A37E62] uppercase tracking-widest mb-4"
             style={{ fontFamily: "var(--font-cantata)" }}
           >
             Get Involved
@@ -32,7 +32,7 @@ const CTASection = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <button 
-              className="bg-[#67391C] text-white px-15 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors"
+              className="bg-[#67391C] text-white px-15 py-4 rounded-full text-lg font-semibold hover:bg-[#8a3f14] transition-colors"
               style={{ fontFamily: "var(--font-cantata)" }}
             >
               Join Us
