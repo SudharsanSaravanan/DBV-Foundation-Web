@@ -13,42 +13,42 @@ const CowGallery = () => {
     {
       id: 1,
       url: "/moo-gallery/cow1.jpg",
-      title: "Beautiful Holstein Cow"
+      title: "Calf"
     },
     {
       id: 2,
       url: "/moo-gallery/cow2.jpg",
-      title: "Cow in Green Pasture"
+      title: "Calf"
     },
     {
       id: 3,
       url: "/moo-gallery/cow3.jpg",
-      title: "Brown Cow Portrait"
+      title: "Calf Resting"
     },
     {
       id: 4,
       url: "/moo-gallery/cow4.jpg",
-      title: "Cow Herd Together"
+      title: "Cow"
     },
     {
       id: 5,
       url: "/moo-gallery/cow5.jpg",
-      title: "Black and White Cow"
+      title: "Cows"
     },
     {
       id: 6,
       url: "/moo-gallery/cow6.jpg",
-      title: "Cow Family"
+      title: "Bull"
     },
     {
       id: 7,
       url: "/moo-gallery/cow7.jpg",
-      title: "Jersey Cow"
+      title: "Cow in Field"
     },
     {
       id: 8,
       url: "/moo-gallery/cow8.jpg",
-      title: "Mother and Calf"
+      title: "Bull in Grass"
     },
   ];
 
