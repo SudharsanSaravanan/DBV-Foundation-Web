@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 const MooHeroBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -8,8 +9,10 @@ const MooHeroBanner = () => {
   const slides = [
     {
       id: 1,
-      image: "/moo-hero/cow1.jpg"
+      image: "/moo-hero/cow1.jpg",
+      alt: "Cow in pasture"
     },
+    // Add more slides if needed
   ]
 
   // Auto background slide change (6s)
@@ -37,14 +40,18 @@ const MooHeroBanner = () => {
               index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
             }`}
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${slide.image})` }}
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority={index === 0} // preload first slide
+              quality={70} // good balance (adjust if needed)
+              sizes="100vw"
+              className="object-cover"
             />
             {/* Translucent Grey Overlay */}
             <div className="absolute inset-0 bg-gray-900/35" />
-            
-            {/* Dark overlay for better text readability */}
+            {/* Dark gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
           </div>
         ))}
@@ -52,32 +59,37 @@ const MooHeroBanner = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 text-center relative z-10 pt-10">
-        {/* Logo and Title Section */}
-        <div className={`flex items-center justify-center mb-6 md:gap-2 transition-all duration-1000 delay-300 ${
-          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        {/* Logo + Title */}
+        <div
+          className={`flex items-center justify-center mb-6 md:gap-2 transition-all duration-1000 delay-300 ${
+            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           <div className="w-20 h-20 md:w-30 md:h-30 bg-white rounded-full flex items-center justify-center mr-4 shadow-lg overflow-hidden p-1">
-            <img 
+            <Image
               src="/moo-with-us_logo.jpg"
-              alt="Cow Logo" 
+              alt="Cow Logo"
+              width={100}
+              height={100}
+              quality={80}
               className="w-full h-full object-cover rounded-full"
             />
           </div>
           <div className="text-left">
-            <h1 
+            <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
-              style={{ 
-                fontFamily: "var(--font-aldrich)",
-                textShadow: '2px 2px 20px rgba(0,0,0,0.7)'
+              style={{
+                fontFamily: 'var(--font-aldrich)',
+                textShadow: '2px 2px 20px rgba(0,0,0,0.7)',
               }}
             >
               Moo With Us
             </h1>
-            <p 
+            <p
               className="text-xl md:text-2xl text-[#d7c1af] mt-1"
-              style={{ 
-                fontFamily: "var(--font-cantata)",
-                textShadow: '1px 1px 10px rgba(0,0,0,0.7)'
+              style={{
+                fontFamily: 'var(--font-cantata)',
+                textShadow: '1px 1px 10px rgba(0,0,0,0.7)',
               }}
             >
               Compassionate Cow Welfare
@@ -86,37 +98,48 @@ const MooHeroBanner = () => {
         </div>
 
         {/* Info Row */}
-        <div className={`flex items-center justify-center gap-8 md:gap-12 mb-8 pt-5 transition-all duration-1000 delay-500 ${
-          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
+        <div
+          className={`flex items-center justify-center gap-8 md:gap-12 mb-8 pt-5 transition-all duration-1000 delay-500 ${
+            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <div className="flex items-center gap-3">
             <div className="w-1 h-1 md:w-2 md:h-2 bg-white/60 rounded-full"></div>
-            <p className="text-white/90 text-[10px] md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
+            <p
+              className="text-white/90 text-[10px] md:text-base font-light tracking-[0.2em] uppercase"
+              style={{ fontFamily: 'var(--font-cantata)' }}
+            >
               Protecting Cows
             </p>
           </div>
           <div className="w-px h-6 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
           <div className="flex items-center gap-3">
             <div className="w-1 h-1 md:w-2 md:h-2 bg-white/60 rounded-full"></div>
-            <p className="text-white/90 text-[10px] md:text-base font-light tracking-[0.2em] uppercase" style={{ fontFamily: 'var(--font-cantata)' }}>
+            <p
+              className="text-white/90 text-[10px] md:text-base font-light tracking-[0.2em] uppercase"
+              style={{ fontFamily: 'var(--font-cantata)' }}
+            >
               Since 2021
             </p>
           </div>
         </div>
-        
+
         {/* Main Description */}
-        <div className={`transition-all duration-1000 delay-700 ${
-          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}>
-          <p 
+        <div
+          className={`transition-all duration-1000 delay-700 ${
+            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
+          <p
             className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-8 leading-relaxed"
-            style={{ 
-              fontFamily: "var(--font-cantata)",
-              textShadow: '1px 1px 10px rgba(0,0,0,0.7)'
+            style={{
+              fontFamily: 'var(--font-cantata)',
+              textShadow: '1px 1px 10px rgba(0,0,0,0.7)',
             }}
           >
-            Where compassion becomes action, giving cows dignity, care, and a brighter tomorrow.
-            Together, we create a safe haven where these gentle creatures can live with dignity and peace.
+            Where compassion becomes action, giving cows dignity, care, and a
+            brighter tomorrow. Together, we create a safe haven where these
+            gentle creatures can live with dignity and peace.
           </p>
         </div>
       </div>
@@ -128,8 +151,8 @@ const MooHeroBanner = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`transition-all duration-500 ${
-              index === currentSlide 
-                ? 'w-12 h-1 bg-white rounded-full' 
+              index === currentSlide
+                ? 'w-12 h-1 bg-white rounded-full'
                 : 'w-3 h-1 bg-white/40 rounded-full hover:bg-white/60'
             }`}
           />
