@@ -26,7 +26,6 @@ const Header = () => {
     { name: 'Home', href: '/moo-with-us' },
     { name: 'About Us', href: '/moo-with-us#why-moo' },
     { name: 'Gallery', href: '/moo-with-us#gallery' },
-    { name: 'Impact', href: '/moo-with-us#impact' },
     { name: 'DBV Foundation', href: '/' },
     { name: 'Contact', href: '/moo-with-us#cta' }
     ];

@@ -8,16 +8,8 @@ const MooHeroBanner = () => {
   const slides = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1200&h=800&fit=crop"
+      image: "/moo-hero/cow1.jpeg"
     },
-    {
-      id: 2,
-      image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=1200&h=800&fit=crop"
-    },
-    {
-      id: 3,
-      image: "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=1200&h=800&fit=crop"
-    }
   ]
 
   // Auto background slide change (6s)
@@ -82,7 +74,7 @@ const MooHeroBanner = () => {
               Moo With Us
             </h1>
             <p 
-              className="text-xl md:text-2xl text-green-100 mt-1"
+              className="text-xl md:text-2xl text-[#d7c1af] mt-1"
               style={{ 
                 fontFamily: "var(--font-cantata)",
                 textShadow: '1px 1px 10px rgba(0,0,0,0.7)'

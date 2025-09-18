@@ -6,7 +6,7 @@ const AboutSection = () => {
           {/* Section Heading */}
           <div className="text-center mb-16">
             <p
-              className="text-sm uppercase tracking-[0.3em] mb-4 font-medium"
+              className="text-lg uppercase tracking-widest mb-4"
               style={{ fontFamily: "var(--font-cantata)", color: "#A37E62" }}
             >
               About Us
@@ -109,9 +109,14 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg">
-              <div className="w-1 h-12 bg-gradient-to-b from-[#A37E62] to-[#67391C] mx-auto mb-6 group-hover:h-16 transition-all duration-300"></div>
+          <div className="grid md:grid-cols-3 gap-8 pb-8">
+            <div 
+              className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
+              style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
+            >
+              <div className="h-16 flex items-end justify-center mb-6">
+                <div className="w-1 h-12 bg-gradient-to-b from-[#A37E62] to-[#67391C] group-hover:h-16 transition-all duration-300"></div>
+              </div>
               <h4
                 className="text-xl font-light mb-4"
                 style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
@@ -127,8 +132,13 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg">
-              <div className="w-1 h-12 bg-gradient-to-b from-[#A37E62] to-[#67391C] mx-auto mb-6 group-hover:h-16 transition-all duration-300"></div>
+            <div 
+              className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
+              style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
+            >
+              <div className="h-16 flex items-end justify-center mb-6">
+                <div className="w-1 h-12 bg-gradient-to-b from-[#A37E62] to-[#67391C] group-hover:h-16 transition-all duration-300"></div>
+              </div>
               <h4
                 className="text-xl font-light mb-4"
                 style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
@@ -144,8 +154,13 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg">
-              <div className="w-1 h-12 bg-gradient-to-b from-[#A37E62] to-[#67391C] mx-auto mb-6 group-hover:h-16 transition-all duration-300"></div>
+            <div 
+              className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
+              style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
+            >
+              <div className="h-16 flex items-end justify-center mb-6">
+                <div className="w-1 h-12 bg-gradient-to-b from-[#A37E62] to-[#67391C] group-hover:h-16 transition-all duration-300"></div>
+              </div>
               <h4
                 className="text-xl font-light mb-4"
                 style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
