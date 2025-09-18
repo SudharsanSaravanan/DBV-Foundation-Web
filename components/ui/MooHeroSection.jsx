@@ -8,7 +8,7 @@ const MooHeroBanner = () => {
   const slides = [
     {
       id: 1,
-      image: "/moo-hero/cow1.jpeg"
+      image: "/moo-hero/cow1.jpg"
     },
   ]
 
