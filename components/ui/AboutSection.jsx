@@ -114,9 +114,18 @@ const AboutSection = () => {
               className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
               style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
             >
-              <div className="h-16 flex items-end justify-center mb-6">
-                <div className="w-1 h-12 bg-gradient-to-b from-[#A37E62] to-[#67391C] group-hover:h-16 transition-all duration-300"></div>
+              {/* Image placeholder instead of vertical line */}
+              <div className="h-16 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#A37E62] to-[#67391C] rounded-lg flex items-center justify-center shadow-sm">
+                  <img 
+                    src="/about-us/compassion.png" 
+                    alt="Compassion icon" 
+                    className="w-10 h-10 object-cover rounded"
+                    style={{ filter: 'brightness(0) invert(1)' }}
+                  />
+                </div>
               </div>
+              
               <h4
                 className="text-xl font-light mb-4"
                 style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
@@ -136,9 +145,18 @@ const AboutSection = () => {
               className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
               style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
             >
-              <div className="h-16 flex items-end justify-center mb-6">
-                <div className="w-1 h-12 bg-gradient-to-b from-[#A37E62] to-[#67391C] group-hover:h-16 transition-all duration-300"></div>
+              {/* Image placeholder instead of vertical line */}
+              <div className="h-16 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#A37E62] to-[#67391C] rounded-lg flex items-center justify-center shadow-sm">
+                  <img 
+                    src="/about-us/consistency.png" 
+                    alt="Consistency icon" 
+                    className="w-10 h-10 object-cover rounded"
+                    style={{ filter: 'brightness(0) invert(1)' }}
+                  />
+                </div>
               </div>
+              
               <h4
                 className="text-xl font-light mb-4"
                 style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
@@ -158,9 +176,18 @@ const AboutSection = () => {
               className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
               style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
             >
-              <div className="h-16 flex items-end justify-center mb-6">
-                <div className="w-1 h-12 bg-gradient-to-b from-[#A37E62] to-[#67391C] group-hover:h-16 transition-all duration-300"></div>
+              {/* Image placeholder instead of vertical line */}
+              <div className="h-16 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#A37E62] to-[#67391C] rounded-lg flex items-center justify-center shadow-sm">
+                  <img 
+                    src="/about-us/holistic.png" 
+                    alt="Holistic Impact icon" 
+                    className="w-10 h-10 object-cover rounded"
+                    style={{ filter: 'brightness(0) invert(1)' }}
+                  />
+                </div>
               </div>
+              
               <h4
                 className="text-xl font-light mb-4"
                 style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
