@@ -11,30 +11,25 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 80);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-    const navItems = [
+  const navItems = [
     { name: 'Home', href: '/moo-with-us' },
     { name: 'About Us', href: '/moo-with-us#why-moo' },
     { name: 'Gallery', href: '/moo-with-us#gallery' },
     { name: 'DBV Foundation', href: '/' },
     { name: 'Contact', href: '/moo-with-us#cta' }
-    ];
+  ];
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
           : 'bg-transparent'
       }`}
     >
@@ -42,11 +37,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo + Site Name */}
           <Link href="/moo-with-us" className="flex items-center space-x-3 group">
-            <div className={`w-12 h-12 relative rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-110 ${isScrolled ? 'border border-black' : ''}`}>
-              <div className="absolute inset-0 bg-gradient-to-br from-[#A37E62] to-[#67391C] rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+            <div className={`w-12 h-12 relative rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-110`}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#A5D6A7] to-[#388E3C] rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
               <Image
                 src="/moo-with-us_logo.jpg"
-                alt="DBV Foundation Logo"
+                alt="Moo With Us Logo"
                 fill
                 className="object-contain rounded-full relative z-10"
               />
@@ -54,7 +49,7 @@ const Header = () => {
             <div className="flex flex-col">
               <span
                 className={`text-xl font-light tracking-wide transition-colors duration-300 ${
-                  isScrolled ? 'text-[#67391C]' : 'text-white'
+                  isScrolled ? 'text-gray-700' : 'text-white'
                 }`}
                 style={{ fontFamily: 'var(--font-aldrich)' }}
               >
@@ -62,7 +57,7 @@ const Header = () => {
               </span>
               <span
                 className={`text-xs font-light tracking-[0.15em] uppercase transition-colors duration-300 ${
-                  isScrolled ? 'text-[#A37E62]' : 'text-white/80'
+                  isScrolled ? 'text-gray-600' : 'text-white/80'
                 }`}
                 style={{ fontFamily: 'var(--font-cantata)' }}
               >
@@ -73,13 +68,13 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-10">
-            {navItems.map((item, idx) => (
+            {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={`relative font-light tracking-wide transition-all duration-300 group ${
                   isScrolled
-                    ? 'text-gray-700 hover:text-[#67391C]'
+                    ? 'text-gray-700 hover:text-[#1B5E20]'
                     : 'text-white/90 hover:text-white'
                 }`}
                 style={{ fontFamily: 'var(--font-cantata)' }}
@@ -87,7 +82,7 @@ const Header = () => {
                 {item.name}
                 <span className={`absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r transition-all duration-300 group-hover:w-full ${
                   isScrolled 
-                    ? 'from-[#A37E62] to-[#67391C]' 
+                    ? 'from-[#66BB6A] to-[#1B5E20]' 
                     : 'from-white/60 to-white'
                 }`}></span>
               </Link>
@@ -100,7 +95,7 @@ const Header = () => {
               href="/moo-with-us#cta"
               className={`px-6 py-2 rounded-full font-light tracking-wide transition-all duration-300 border ${
                 isScrolled
-                  ? 'bg-[#67391C] text-white border-[#67391C] hover:bg-[#A37E62] hover:border-[#A37E62] shadow-md hover:shadow-lg'
+                  ? 'bg-[#1B5E20] text-white border-[#1B5E20] hover:bg-[#66BB6A] hover:border-[#66BB6A] shadow-md hover:shadow-lg'
                   : 'bg-white/10 text-white border-white/30 backdrop-blur-sm hover:bg-white/20 hover:border-white/50'
               }`}
               style={{ fontFamily: 'var(--font-cantata)' }}
@@ -122,13 +117,9 @@ const Header = () => {
                   : 'hover:bg-white/10'
             }`}></div>
             {isMenuOpen ? (
-              <X size={24} className={`relative z-10 transition-colors duration-300 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`} />
+              <X size={24} className={`relative z-10 transition-colors duration-300 ${isScrolled ? 'text-gray-700' : 'text-gray-700'}`} />
             ) : (
-              <Menu size={24} className={`relative z-10 transition-colors duration-300 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`} />
+              <Menu size={24} className={`relative z-10 transition-colors duration-300 ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
             )}
           </button>
         </div>
@@ -137,26 +128,26 @@ const Header = () => {
         <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="bg-white/95 backdrop-blur-md border-t border-gray-100 rounded-b-2xl shadow-xl mt-2">
+          <div className="bg-white/95 backdrop-blur-md border-t border-gray-200 rounded-b-2xl shadow-xl mt-2">
             <nav className="flex flex-col py-6">
-              {navItems.map((item, idx) => (
+              {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="group flex items-center px-6 py-3 text-gray-700 hover:text-[#67391C] transition-all duration-300 hover:bg-gray-50"
+                  className="group flex items-center px-6 py-3 text-gray-700 hover:text-[#1B5E20] transition-all duration-300 hover:bg-gray-50"
                   style={{ fontFamily: 'var(--font-cantata)' }}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span className="w-2 h-2 bg-[#A37E62] rounded-full mr-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="w-2 h-2 bg-[#66BB6A] rounded-full mr-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   <span className="font-light tracking-wide">{item.name}</span>
                 </Link>
               ))}
               
               {/* Mobile CTA */}
-              <div className="px-6 pt-4 border-t border-gray-100 mt-2">
+              <div className="px-6 pt-4 border-t border-gray-200 mt-2">
                 <Link
                   href="/moo-with-us#cta"
-                  className="block w-full text-center py-3 bg-[#67391C] text-white rounded-full font-light tracking-wide transition-all duration-300 hover:bg-[#A37E62] shadow-md hover:shadow-lg"
+                  className="block w-full text-center py-3 bg-[#1B5E20] text-white rounded-full font-light tracking-wide transition-all duration-300 hover:bg-[#66BB6A] shadow-md hover:shadow-lg"
                   style={{ fontFamily: 'var(--font-cantata)' }}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -169,7 +160,7 @@ const Header = () => {
       </div>
 
       {/* Decorative Line */}
-      <div className={`absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent transition-opacity duration-500 ${
+      <div className={`absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent transition-opacity duration-500 ${
         isScrolled ? 'opacity-100' : 'opacity-0'
       }`}></div>
     </header>

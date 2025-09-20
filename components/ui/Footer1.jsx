@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#67391C] to-[#4A2818] text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-[#1B5E20] to-[#388E3C] text-white overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 border border-white/20 rounded-full"></div>
@@ -22,13 +22,13 @@ const Footer = () => {
 
       <div className="relative z-10 py-16">
         <div className="container mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-12">
+          <div className="grid lg:grid-cols-6 md:grid-cols-2 gap-8 mb-12">
             
-            {/* Brand Section */}
-            <div className="lg:col-span-2">
+            {/* Brand Section - Expanded */}
+            <div className="lg:col-span-3 md:col-span-2">
               <div className="flex items-center mb-6 gap-3">
                 <div className="w-14 h-14 relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#A37E62] to-[#C49E75] rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#66BB6A] to-[#388E3C] rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                   <Image
                     src="/logo-dbv.png"
                     alt="DBV Foundation Logo"
@@ -45,7 +45,7 @@ const Footer = () => {
                   </span>
                   <span 
                     className="text-sm font-light tracking-[0.15em] uppercase opacity-80"
-                    style={{ fontFamily: "var(--font-cantata)", color: "#A37E62" }}
+                    style={{ fontFamily: "var(--font-cantata)", color: "#66BB6A" }}
                   >
                     Since 2009
                   </span>
@@ -53,7 +53,7 @@ const Footer = () => {
               </div>
               
               <p 
-                className="text-gray-300 leading-relaxed font-light mb-6 max-w-md"
+                className="text-gray-300 leading-relaxed font-light mb-6 max-w-lg"
                 style={{ 
                   fontFamily: "var(--font-cantata)",
                   lineHeight: "1.7"
@@ -64,30 +64,30 @@ const Footer = () => {
               </p>
 
               {/* Decorative Line */}
-              <div className="w-20 h-px bg-gradient-to-r from-[#A37E62] to-transparent mb-6"></div>
+              <div className="w-20 h-px bg-gradient-to-r from-[#66BB6A] to-transparent mb-6"></div>
               
-              <div className="flex items-center space-x-6 text-sm">
+              <div className="flex flex-wrap items-center gap-6 text-sm">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#A37E62] rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#66BB6A] rounded-full"></div>
                   <span className="text-gray-300 font-light" style={{ fontFamily: "var(--font-cantata)" }}>
                     Coimbatore
                   </span>
                 </div>
                 <div className="w-px h-4 bg-gray-600"></div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#A37E62] rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#66BB6A] rounded-full"></div>
                   <span className="text-gray-300 font-light" style={{ fontFamily: "var(--font-cantata)" }}>
-                    10+ Years
+                    16+ Years
                   </span>
                 </div>
               </div>
             </div>
             
             {/* Quick Links */}
-            <div>
+            <div className="lg:col-span-2 md:col-span-1">
               <h4 
                 className="font-light mb-6 text-xl tracking-wide"
-                style={{ fontFamily: "var(--font-aldrich)", color: "#A37E62" }}
+                style={{ fontFamily: "var(--font-aldrich)", color: "#66BB6A" }}
               >
                 Navigation
               </h4>
@@ -99,69 +99,13 @@ const Footer = () => {
                       className="group flex items-center text-gray-300 hover:text-white transition-all duration-300 font-light"
                       style={{ fontFamily: "var(--font-cantata)" }}
                     >
-                      <span className="w-0 h-px bg-[#A37E62] mr-0 group-hover:w-4 group-hover:mr-3 transition-all duration-300"></span>
+                      <span className="w-0 h-px bg-[#66BB6A] mr-0 group-hover:w-4 group-hover:mr-3 transition-all duration-300"></span>
                       {link.name}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </div>
-            
-            {/* Trust Information */}
-            <div>
-              <h4 
-                className="font-light mb-6 text-xl tracking-wide"
-                style={{ fontFamily: "var(--font-aldrich)", color: "#A37E62" }}
-              >
-                Legal Information
-              </h4>
-              <div className="space-y-4">
-                <div className="group">
-                  <p 
-                    className="text-gray-400 text-xs uppercase tracking-wider mb-1 font-light"
-                    style={{ fontFamily: "var(--font-cantata)" }}
-                  >
-                    Registration No.
-                  </p>
-                  <p 
-                    className="text-gray-300 font-light group-hover:text-white transition-colors duration-300"
-                    style={{ fontFamily: "var(--font-cantata)" }}
-                  >
-                    TN/2014/0123456
-                  </p>
-                </div>
-                
-                <div className="group">
-                  <p 
-                    className="text-gray-400 text-xs uppercase tracking-wider mb-1 font-light"
-                    style={{ fontFamily: "var(--font-cantata)" }}
-                  >
-                    12A Registration
-                  </p>
-                  <p 
-                    className="text-gray-300 font-light group-hover:text-white transition-colors duration-300"
-                    style={{ fontFamily: "var(--font-cantata)" }}
-                  >
-                    AAABT1234C
-                  </p>
-                </div>
-                
-                <div className="group">
-                  <p 
-                    className="text-gray-400 text-xs uppercase tracking-wider mb-1 font-light"
-                    style={{ fontFamily: "var(--font-cantata)" }}
-                  >
-                    80G Registration
-                  </p>
-                  <p 
-                    className="text-gray-300 font-light group-hover:text-white transition-colors duration-300"
-                    style={{ fontFamily: "var(--font-cantata)" }}
-                  >
-                    AAABT1234CF20214
-                  </p>
-                </div>
-              </div>
-            </div>
+            </div> 
           </div>
           
           {/* Bottom Section */}
@@ -171,13 +115,13 @@ const Footer = () => {
               {/* Copyright */}
               <div className="text-center md:text-left">
                 <p 
-                  className="text-gray-400 font-light text-sm"
+                  className="text-gray-200 font-light text-sm"
                   style={{ fontFamily: "var(--font-cantata)" }}
                 >
                   © 2025 DBV Foundation. All rights reserved.
                 </p>
                 <p 
-                  className="text-gray-500 font-light text-xs mt-1"
+                  className="text-gray-300 font-light text-xs mt-1"
                   style={{ fontFamily: "var(--font-cantata)" }}
                 >
                   Developed with compassion for social impact.
@@ -199,13 +143,13 @@ const Footer = () => {
             </div>
             
             {/* Final Accent Line */}
-            <div className="mt-8 w-full h-px bg-gradient-to-r from-transparent via-[#A37E62]/20 to-transparent"></div>
+            <div className="mt-8 w-full h-px bg-gradient-to-r from-transparent via-[#66BB6A]/20 to-transparent"></div>
           </div>
         </div>
       </div>
 
       {/* Bottom Glow Effect */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-24 bg-gradient-to-t from-[#A37E62]/10 to-transparent blur-3xl"></div>
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-24 bg-gradient-to-t from-[#66BB6A]/10 to-transparent blur-3xl"></div>
     </footer>
   );
 };

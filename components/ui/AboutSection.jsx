@@ -7,7 +7,7 @@ const AboutSection = () => {
           <div className="text-center mb-16">
             <p
               className="text-lg uppercase tracking-widest mb-4"
-              style={{ fontFamily: "var(--font-cantata)", color: "#A37E62" }}
+              style={{ fontFamily: "var(--font-cantata)", color: "#388E3C" }}
             >
               About Us
             </p>
@@ -16,7 +16,7 @@ const AboutSection = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6"
               style={{
                 fontFamily: "var(--font-aldrich)",
-                color: "#67391C",
+                color: "#0E141C",
               }}
             >
               Making a Difference Together
@@ -31,11 +31,11 @@ const AboutSection = () => {
               className="text-xl leading-relaxed max-w-4xl mx-auto font-light"
               style={{ fontFamily: "var(--font-cantata)", color: "#555", lineHeight: "1.8" }}
             >
-              The <span className="font-semibold text-[#67391C]">DBV Foundation</span> has been
+              The <span className="font-semibold text-[#1B5E20]">DBV Foundation</span> has been
               transforming lives through compassion, empathy, and service since our establishment.
-              Our journey began with <span className="text-[#67391C] font-medium">education for children in 2006</span>,
-              expanded to <span className="text-[#67391C] font-medium">animal welfare with "Moo With Us" in 2021</span>,
-              and launched our <span className="text-[#67391C] font-medium">"Food for All" program on 20th August 2023</span>.
+              Our journey began with <span className="text-[#1B5E20] font-medium">education for children in 2006</span>,
+              expanded to <span className="text-[#1B5E20] font-medium">animal welfare with "Moo With Us" in 2021</span>,
+              and launched our <span className="text-[#1B5E20] font-medium">"Food for All" program on 20th August 2023</span>.
               We believe that every child deserves quality education, every family has the right to
               nutritious food, and every animal should be treated with kindness and dignity.
             </p>
@@ -45,12 +45,12 @@ const AboutSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 mb-20">
             {/* Vision Card */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#E9D1B5] to-[#D4C4A8] rounded-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#D5DEE3] to-[#C4D0D6] rounded-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
               <div className="relative bg-white p-10 rounded-2xl shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-px bg-[#A37E62] mb-6"></div>
+                <div className="w-16 h-px bg-[#1a451d] mb-6"></div>
                 <h3
                   className="text-2xl font-light mb-6"
-                  style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
+                  style={{ fontFamily: "var(--font-aldrich)", color: "#1B5E20" }}
                 >
                   Our Vision
                 </h3>
@@ -61,7 +61,7 @@ const AboutSection = () => {
                   To create a world where every child's potential is unlocked through quality education,
                   no individual experiences hunger, and all animals — especially cows — are treated
                   with reverence and care. We envision communities built on
-                  <span className="text-[#67391C] font-medium"> empathy, inclusivity, and sustainability</span>,
+                  <span className="text-[#1B5E20] font-medium"> empathy, inclusivity, and sustainability</span>,
                   where kindness becomes the foundation of progress and harmony between humans and nature.
                 </p>
               </div>
@@ -71,10 +71,10 @@ const AboutSection = () => {
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#D5DEE3] to-[#C4D0D6] rounded-2xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
               <div className="relative bg-white p-10 rounded-2xl shadow-lg border border-gray-100 group-hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-px bg-[#A37E62] mb-6"></div>
+                <div className="w-16 h-px bg-[#1a451d] mb-6"></div>
                 <h3
                   className="text-2xl font-light mb-6"
-                  style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
+                  style={{ fontFamily: "var(--font-aldrich)", color: "#1B5E20" }}
                 >
                   Our Mission
                 </h3>
@@ -85,7 +85,7 @@ const AboutSection = () => {
                   To deliver impactful programs that empower underprivileged children through education,
                   provide wholesome meals to families in need every Monday, and offer comprehensive
                   care for cows including food, shelter, and medical assistance. Through
-                  <span className="text-[#67391C] font-medium"> community engagement, dedicated service,
+                  <span className="text-[#1B5E20] font-medium"> community engagement, dedicated service,
                   and innovative approaches</span>, we create lasting change that promotes harmony
                   between humans and animals while addressing fundamental social needs.
                 </p>
@@ -97,7 +97,7 @@ const AboutSection = () => {
           <div className="text-center mb-12">
             <h3
               className="text-3xl font-light mb-2"
-              style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
+              style={{ fontFamily: "var(--font-aldrich)", color: "#1B5E20" }}
             >
               Our Core Values
             </h3>
@@ -111,12 +111,12 @@ const AboutSection = () => {
 
           <div className="grid md:grid-cols-3 gap-8 pb-8">
             <div 
-              className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
+              className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#1a451d] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
               style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
             >
               {/* Image placeholder instead of vertical line */}
               <div className="h-16 flex items-center justify-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#A37E62] to-[#67391C] rounded-lg flex items-center justify-center shadow-sm">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1a451d] to-[#1B5E20] rounded-lg flex items-center justify-center shadow-sm">
                   <img 
                     src="/about-us/compassion.png" 
                     alt="Compassion icon" 
@@ -128,7 +128,7 @@ const AboutSection = () => {
               
               <h4
                 className="text-xl font-light mb-4"
-                style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
+                style={{ fontFamily: "var(--font-aldrich)", color: "#1B5E20" }}
               >
                 Compassion
               </h4>
@@ -142,12 +142,12 @@ const AboutSection = () => {
             </div>
 
             <div 
-              className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
+              className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#1a451d] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
               style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
             >
               {/* Image placeholder instead of vertical line */}
               <div className="h-16 flex items-center justify-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#A37E62] to-[#67391C] rounded-lg flex items-center justify-center shadow-sm">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1a451d] to-[#1B5E20] rounded-lg flex items-center justify-center shadow-sm">
                   <img 
                     src="/about-us/consistency.png" 
                     alt="Consistency icon" 
@@ -159,7 +159,7 @@ const AboutSection = () => {
               
               <h4
                 className="text-xl font-light mb-4"
-                style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
+                style={{ fontFamily: "var(--font-aldrich)", color: "#1B5E20" }}
               >
                 Consistency
               </h4>
@@ -173,12 +173,12 @@ const AboutSection = () => {
             </div>
 
             <div 
-              className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#A37E62] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
+              className="group text-center p-8 rounded-xl bg-white border border-gray-100 hover:border-[#1a451d] transition-all duration-300 hover:shadow-lg hover:translate-y-2"
               style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
             >
               {/* Image placeholder instead of vertical line */}
               <div className="h-16 flex items-center justify-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#A37E62] to-[#67391C] rounded-lg flex items-center justify-center shadow-sm">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#1a451d] to-[#1B5E20] rounded-lg flex items-center justify-center shadow-sm">
                   <img 
                     src="/about-us/holistic.png" 
                     alt="Holistic Impact icon" 
@@ -190,7 +190,7 @@ const AboutSection = () => {
               
               <h4
                 className="text-xl font-light mb-4"
-                style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
+                style={{ fontFamily: "var(--font-aldrich)", color: "#1B5E20" }}
               >
                 Holistic Impact
               </h4>
@@ -206,7 +206,7 @@ const AboutSection = () => {
 
           {/* Bottom Accent */}
           <div className="text-center mt-16">
-            <div className="w-32 h-px bg-gradient-to-r from-transparent via-[#A37E62] to-transparent mx-auto"></div>
+            <div className="w-32 h-px bg-gradient-to-r from-transparent via-[#268402] to-transparent mx-auto"></div>
           </div>
         </div>
       </div>

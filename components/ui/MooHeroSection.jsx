@@ -86,7 +86,7 @@ const MooHeroBanner = () => {
               Moo With Us
             </h1>
             <p
-              className="text-xl md:text-2xl text-[#d7c1af] mt-1"
+              className="text-xl md:text-2xl text-[#c0c0c0] mt-1"
               style={{
                 fontFamily: 'var(--font-cantata)',
                 textShadow: '1px 1px 10px rgba(0,0,0,0.7)',

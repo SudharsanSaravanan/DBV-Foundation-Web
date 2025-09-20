@@ -59,7 +59,7 @@ const InitiativesCarousel = () => {
             className="text-lg uppercase tracking-widest mb-4"
             style={{ 
               fontFamily: "var(--font-cantata)",
-              color: '#A37E62'
+              color: '#2E7D32'
             }}
           >
             Our Initiatives
@@ -149,7 +149,7 @@ const InitiativesCarousel = () => {
               className="h-full transition-all duration-700 ease-linear"
               style={{ 
                 width: `${((currentSlide + 1) / initiatives.length) * 100}%`,
-                backgroundColor: '#A37E62'
+                backgroundColor: '#2E7D32'
               }}
             />
           </div>
@@ -166,7 +166,7 @@ const InitiativesCarousel = () => {
                     : 'w-2 h-2 opacity-40 hover:opacity-70'
                 }`}
                 style={{
-                  backgroundColor: '#A37E62',
+                  backgroundColor: '#2E7D32',
                 }}
               />
             ))}
