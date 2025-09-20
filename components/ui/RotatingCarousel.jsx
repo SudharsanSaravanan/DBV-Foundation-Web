@@ -23,8 +23,8 @@ export default function RotatingCarousel() {
     <div
       className="w-full py-4 px-4 relative overflow-hidden"
       style={{
-        backgroundColor: "#67391C",
-        minHeight: "50px", // base height
+        backgroundColor: "#1B5E20", // deep green background
+        minHeight: "50px",
       }}
     >
       {/* Scrolling Text */}
@@ -33,8 +33,8 @@ export default function RotatingCarousel() {
           className="whitespace-nowrap inline-block animate-scroll"
           style={{
             fontFamily: "var(--font-aldrich)",
-            color: "#F2E9E4",
-            fontSize: "0.95rem", // default size (desktop)
+            color: "#E8F5E9", // light green text
+            fontSize: "0.95rem",
             fontWeight: "300",
             letterSpacing: "0.05em",
             lineHeight: "1.4",
@@ -43,15 +43,15 @@ export default function RotatingCarousel() {
           {[...carouselMessages, ...carouselMessages].map((message, index) => (
             <span key={index} className="inline-block">
               {message}
-              <span className="mx-4 sm:mx-3 text-white/40">•</span>
+              <span className="mx-4 sm:mx-3 text-green-200/50">•</span>
             </span>
           ))}
         </div>
       </div>
 
       {/* Fades */}
-      <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-[#67391C] to-transparent pointer-events-none z-10"></div>
-      <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-[#67391C] to-transparent pointer-events-none z-10"></div>
+      <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-[#1B5E20] to-transparent pointer-events-none z-10"></div>
+      <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-[#1B5E20] to-transparent pointer-events-none z-10"></div>
 
       {/* Animation + Responsive Styles */}
       <style jsx>{`
@@ -72,7 +72,7 @@ export default function RotatingCarousel() {
         @media (max-width: 768px) {
           .animate-scroll {
             animation: scroll 55s linear infinite;
-            font-size: 0.8rem !important; /* shrink text */
+            font-size: 0.8rem !important;
           }
         }
 
@@ -80,7 +80,7 @@ export default function RotatingCarousel() {
         @media (max-width: 480px) {
           .animate-scroll {
             animation: scroll 65s linear infinite;
-            font-size: 0.75rem !important; /* smaller text */
+            font-size: 0.75rem !important;
           }
         }
       `}</style>

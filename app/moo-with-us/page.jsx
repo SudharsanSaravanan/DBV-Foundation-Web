@@ -22,7 +22,7 @@ export default function MooWithUs() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-[#F0EFF1] to-white">
+      <div className="flex items-center justify-center h-screen bg-white">
         {/* Main Loader Container */}
         <div className="text-center">
           {/* Logo Container */}
@@ -39,26 +39,22 @@ export default function MooWithUs() {
           {/* Text Content */}
           <div className="space-y-3">
             <h1
-              className="text-3xl font-light tracking-wide text-[#67391C]"
-              style={{ 
-                fontFamily: 'var(--font-aldrich)'
-              }}
+              className="text-3xl font-light tracking-wide text-gray-700"
+              style={{ fontFamily: 'var(--font-aldrich)' }}
             >
               Moo With Us
             </h1>
             
             <p
-              className="text-sm font-light tracking-[0.15em] uppercase text-[#A37E62]"
-              style={{ 
-                fontFamily: 'var(--font-cantata)'
-              }}
+              className="text-sm font-light tracking-[0.15em] uppercase text-gray-600"
+              style={{ fontFamily: 'var(--font-cantata)' }}
             >
               Sacred Bovine Care
             </p>
 
             <div className="mt-6">
               <p
-                className="text-[#67391C] text-sm font-light mb-4"
+                className="text-[#1B5E20] text-sm font-light mb-4"
                 style={{ fontFamily: 'var(--font-cantata)' }}
               >
                 Loading sanctuary of care and compassion...
@@ -67,7 +63,7 @@ export default function MooWithUs() {
               {/* Progress Bar */}
               <div className="w-64 h-1 bg-gray-200 rounded-full mx-auto overflow-hidden">
                 <div 
-                  className="h-full bg-gradient-to-r from-[#A37E62] to-[#67391C] rounded-full animate-progress"
+                  className="h-full bg-gradient-to-r from-[#66BB6A] to-[#388E3C] rounded-full animate-progress"
                 ></div>
               </div>
             </div>

@@ -58,12 +58,12 @@ const MooImpactSection = () => {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="py-20" style={{ backgroundColor: 'white' }}>
+    <section ref={sectionRef} className="py-20" style={{ backgroundColor: 'white' }}> {/* soft light green */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p
             className="text-lg uppercase tracking-widest mb-4"
-            style={{ fontFamily: "var(--font-cantata)", color: "#8B6F47" }}
+            style={{ fontFamily: "var(--font-cantata)", color: "#2E7D32" }} // medium green
           >
             Our Impact
           </p>
@@ -72,7 +72,7 @@ const MooImpactSection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8"
             style={{
               fontFamily: "var(--font-aldrich)",
-              color: "black",
+              color: "#0E141C",
             }}
           >
             Creating a Tail of Happiness
@@ -84,13 +84,13 @@ const MooImpactSection = () => {
             <div key={index} className="text-center">
               <div 
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2"
-                style={{ fontFamily: "var(--font-aldrich)", color: "#67391C" }}
+                style={{ fontFamily: "var(--font-aldrich)", color: "#1B5E20" }} // dark green numbers
               >
                 {animatedNumbers[index]}{stat.suffix}
               </div>
               <div 
                 className="text-sm md:text-base uppercase tracking-wide"
-                style={{ fontFamily: "var(--font-cantata)", color: "black" }}
+                style={{ fontFamily: "var(--font-cantata)", color: "#388E3C" }} // medium green labels
               >
                 {stat.label}
               </div>

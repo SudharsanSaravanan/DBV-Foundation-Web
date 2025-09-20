@@ -6,37 +6,37 @@ const WhyMooSection = () => {
       icon: <Heart className="w-8 h-8" />,
       title: "Compassionate Care",
       description: "We treat every cow with love and respect, fostering a peaceful and secure environment where abandoned and sick cows can heal and thrive emotionally and physically.",
-      color: "text-[#67391C]"
+      color: "text-[#1B5E20]" // dark green
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Safe Haven",
       description: "We provide spacious enclosures with natural elements and enriched environments to reduce stress and boost immunity, creating a secure home for our bovine family.",
-      color: "text-[#67391C]"
+      color: "text-[#1B5E20]"
     },
     {
       icon: <Stethoscope className="w-8 h-8" />,
       title: "Enhanced Health Care",
       description: "Regular vaccinations, meticulous health checks, and improved sanitation ensure optimal well-being. We've learned from challenges and strengthened our health protocols.",
-      color: "text-[#67391C]"
+      color: "text-[#1B5E20]"
     },
     {
       icon: <Beef className="w-8 h-8" />,
       title: "Nutritional Excellence",
       description: "Each cow receives a balanced diet tailored to their individual needs for optimal health and disease resistance, ensuring they get the nutrition they deserve.",
-      color: "text-[#67391C]"
+      color: "text-[#1B5E20]"
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Heritage Preservation",
       description: "We protect India's native breeds like Kankrej, Ongole, Hallikar, Gir, Kangeyam, and Punganur from extinction, preserving our rich cultural heritage.",
-      color: "text-[#67391C]"
+      color: "text-[#1B5E20]"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Community Impact",
       description: "Our initiative brings together supporters and volunteers in collective action, creating awareness and building a more compassionate world for these magnificent animals.",
-      color: "text-[#67391C]"
+      color: "text-[#1B5E20]"
     }
   ];
 
@@ -47,7 +47,7 @@ const WhyMooSection = () => {
         <div className="text-center mb-16">
           <p
             className="text-lg uppercase tracking-widest mb-4"
-            style={{ fontFamily: "var(--font-cantata)", color: "#A37E62" }}
+            style={{ fontFamily: "var(--font-cantata)", color: "#2E7D32" }} // medium green
           >
             A Tail of Happiness
           </p>
@@ -56,7 +56,7 @@ const WhyMooSection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8"
             style={{
               fontFamily: "var(--font-aldrich)",
-              color: "#67391C",
+              color: "#0E141C",
             }}
           >
             Advocating for Joyful Lives for Cows
@@ -64,7 +64,7 @@ const WhyMooSection = () => {
           
           <p 
             className="text-lg max-w-4xl mx-auto leading-relaxed mb-8"
-            style={{ fontFamily: "var(--font-cantata)", color: "#A37E62" }}
+            style={{ fontFamily: "var(--font-cantata)", color: "#388E3C" }} // greenish text
           >
             This NGO was started out of genuine concern for cow welfare, a commitment to ethical 
             considerations, a desire to conserve native breeds, a passion for raising awareness, 
@@ -77,7 +77,7 @@ const WhyMooSection = () => {
         {/* Reasons Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {reasons.map((reason, index) => (
-            <div key={index} className="p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1" style={{ backgroundColor: '#d6bdae' }}>
+            <div key={index} className="p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-1 border-green-700 hover:transform hover:-translate-y-1" style={{ backgroundColor: 'white' }}> {/* light green */}
               <div className={`${reason.color} mb-6`}>
                 {reason.icon}
               </div>
@@ -86,7 +86,7 @@ const WhyMooSection = () => {
                 className="text-xl font-bold mb-4"
                 style={{
                   fontFamily: "var(--font-aldrich)",
-                  color: "#67391C",
+                  color: "#1B5E20",
                 }}
               >
                 {reason.title}
@@ -94,7 +94,7 @@ const WhyMooSection = () => {
               
               <p 
                 className="leading-relaxed"
-                style={{ fontFamily: "var(--font-cantata)", color: "#936b51" }}
+                style={{ fontFamily: "var(--font-cantata)", color: "#1B5E20" }}
               >
                 {reason.description}
               </p>
@@ -103,7 +103,7 @@ const WhyMooSection = () => {
         </div>
 
         {/* Mission Statement */}
-        <div className="rounded-2xl p-8 md:p-12 text-center mb-12" style={{ backgroundColor: '#67391C' }}>
+        <div className="rounded-2xl p-8 md:p-12 text-center mb-12" style={{ backgroundColor: '#2E7D32' }}> {/* medium green */}
           <h3 
             className="text-2xl md:text-3xl font-bold text-white mb-6"
             style={{ fontFamily: "var(--font-aldrich)" }}
@@ -113,7 +113,7 @@ const WhyMooSection = () => {
           
           <p 
             className="text-xl max-w-4xl mx-auto leading-relaxed"
-            style={{ fontFamily: "var(--font-cantata)", color: "#E9D1B5" }}
+            style={{ fontFamily: "var(--font-cantata)", color: "#C8E6C9" }} // light green text
           >
             Our mission is to tirelessly advocate for the welfare of cows and protect India's native 
             breeds from the brink of extinction. We are dedicated to safeguarding these gentle 
