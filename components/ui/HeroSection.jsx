@@ -51,7 +51,7 @@ const HeroBanner = () => {
               className="object-cover"
             />
             {/* Translucent Grey Overlay */}
-            <div className="absolute inset-0 bg-gray-900/35" />
+            <div className="absolute inset-0 bg-gray-900/40" />
             {/* Elegant Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#67391C]/10 via-transparent to-[#A37E62]/10" />

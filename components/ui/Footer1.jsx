@@ -47,7 +47,7 @@ const Footer = () => {
                     className="text-sm font-light tracking-[0.15em] uppercase opacity-80"
                     style={{ fontFamily: "var(--font-cantata)", color: "#A37E62" }}
                   >
-                    Since 2009
+                    Since 2004
                   </span>
                 </div>
               </div>

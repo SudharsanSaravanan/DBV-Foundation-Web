@@ -77,7 +77,7 @@ const WhyMooSection = () => {
         {/* Reasons Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {reasons.map((reason, index) => (
-            <div key={index} className="p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1" style={{ backgroundColor: '#d6bdae' }}>
+            <div key={index} className="p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1 border-1 border-amber-800 bg-[#fff5eea9]" style={{ backgroundColor: '#fff5eea9' }}>
               <div className={`${reason.color} mb-6`}>
                 {reason.icon}
               </div>
