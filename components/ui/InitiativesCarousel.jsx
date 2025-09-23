@@ -1,16 +1,31 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Heart, Utensils, BookOpen } from 'lucide-react';
 
 const InitiativesCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [currentX, setCurrentX] = useState(0);
+  const [translateOffset, setTranslateOffset] = useState(0);
+  const containerRef = useRef(null);
 
   const initiatives = [
     {
       id: 1,
+      title: "Moo With Us",
+      description: "Started in 2021, this initiative is dedicated to the care of cows, providing them with food, shelter, and medical assistance while promoting harmony between humans and animals.",
+      icon: <Heart className="w-12 h-12" />,
+      link: "/moo-with-us",
+      hasDetailedPage: true,
+      bgImage: "/initiatives/cow-calf.jpeg",
+      iconColor: "text-green-100"
+    },
+    {
+      id: 2,
       title: "Food for All",
       description: "Launched on 20th August 2023, our food distribution program ensures that no one goes hungry. Every Monday, we provide wholesome meals to those in need. From 20.08.2023 to 31.08.2025, we have nourished 13,322 people and continue to expand our reach.",
       icon: <Utensils className="w-12 h-12" />,
@@ -20,7 +35,7 @@ const InitiativesCarousel = () => {
       iconColor: "text-orange-100"
     },
     {
-      id: 2,
+      id: 3,
       title: "Education for Children",
       description: "Since 2006, we have empowered underprivileged children through quality education, mentorship, and resources, enabling them to build stronger, brighter futures.",
       icon: <BookOpen className="w-12 h-12" />,
@@ -29,27 +44,105 @@ const InitiativesCarousel = () => {
       bgImage: "/initiatives/children-class.jpg",
       iconColor: "text-blue-100"
     },
-    {
-      id: 3,
-      title: "Moo With Us",
-      description: "Started in 2021, this initiative is dedicated to the care of cows, providing them with food, shelter, and medical assistance while promoting harmony between humans and animals.",
-      icon: <Heart className="w-12 h-12" />,
-      link: "/moo-with-us",
-      hasDetailedPage: true,
-      bgImage: "/initiatives/cow-calf.jpeg",
-      iconColor: "text-green-100"
-    }
   ];
 
   useEffect(() => {
-    if (!isPaused) {
+    if (!isPaused && !isDragging) {
       const interval = setInterval(() => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % initiatives.length);
       }, 4000);
 
       return () => clearInterval(interval);
     }
-  }, [initiatives.length, isPaused]);
+  }, [initiatives.length, isPaused, isDragging]);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const goToPrevSlide = () => {
+    setCurrentSlide((prevSlide) => 
+      prevSlide === 0 ? initiatives.length - 1 : prevSlide - 1
+    );
+  };
+
+  const goToNextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % initiatives.length);
+  };
+
+  // Mouse events
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.clientX);
+    setCurrentX(e.clientX);
+    setIsPaused(true);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    
+    setCurrentX(e.clientX);
+    const diff = e.clientX - startX;
+    const containerWidth = containerRef.current?.offsetWidth || 0;
+    setTranslateOffset((diff / containerWidth) * 100);
+  };
+
+  const handleMouseUp = () => {
+    if (!isDragging) return;
+    
+    const diff = currentX - startX;
+    const containerWidth = containerRef.current?.offsetWidth || 0;
+    const threshold = containerWidth * 0.1; // 10% of container width
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        goToPrevSlide();
+      } else {
+        goToNextSlide();
+      }
+    }
+
+    setIsDragging(false);
+    setTranslateOffset(0);
+    setIsPaused(false);
+  };
+
+  // Touch events
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].clientX);
+    setCurrentX(e.touches[0].clientX);
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    
+    setCurrentX(e.touches[0].clientX);
+    const diff = e.touches[0].clientX - startX;
+    const containerWidth = containerRef.current?.offsetWidth || 0;
+    setTranslateOffset((diff / containerWidth) * 100);
+  };
+
+  const handleTouchEnd = () => {
+    if (!isDragging) return;
+    
+    const diff = currentX - startX;
+    const containerWidth = containerRef.current?.offsetWidth || 0;
+    const threshold = containerWidth * 0.1; // 10% of container width
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        goToPrevSlide();
+      } else {
+        goToNextSlide();
+      }
+    }
+
+    setIsDragging(false);
+    setTranslateOffset(0);
+    setIsPaused(false);
+  };
 
   return (
     <section id="initiatives" className="py-20" style={{ backgroundColor: '#F0EFF1' }}>
@@ -77,14 +170,26 @@ const InitiativesCarousel = () => {
         </div>
 
         <div 
+          ref={containerRef}
           className="relative max-w-6xl mx-auto"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
           <div className="overflow-hidden rounded-3xl shadow-2xl">
             <div 
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              className={`flex ${isDragging ? '' : 'transition-transform duration-700 ease-in-out'} cursor-grab active:cursor-grabbing select-none`}
+              style={{ 
+                transform: `translateX(-${currentSlide * 100 + (isDragging ? -translateOffset : 0)}%)`,
+                userSelect: 'none'
+              }}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
             >
               {initiatives.map((initiative, index) => (
                 <div key={initiative.id} className="w-full flex-shrink-0 relative">
@@ -131,6 +236,7 @@ const InitiativesCarousel = () => {
                         href={initiative.link}
                         className="inline-block bg-white text-gray-800 px-6 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-md text-base font-semibold"
                         style={{ fontFamily: "var(--font-cantata)" }}
+                        onClick={(e) => e.stopPropagation()} // Prevent swipe when clicking button
                       >
                         Learn More
                       </Link>
@@ -143,7 +249,7 @@ const InitiativesCarousel = () => {
             </div>
           </div>
 
-          {/* Minimalistic Progress Bar */}
+          {/* Progress Bar Only */}
           <div className="mt-6 bg-gray-300/30 rounded-full h-1 overflow-hidden">
             <div 
               className="h-full transition-all duration-700 ease-linear"
@@ -152,24 +258,6 @@ const InitiativesCarousel = () => {
                 backgroundColor: '#A37E62'
               }}
             />
-          </div>
-
-          {/* Minimalistic Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-3">
-            {initiatives.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`transition-all duration-200 rounded-full ${
-                  index === currentSlide 
-                    ? 'w-2 h-2 opacity-100' 
-                    : 'w-2 h-2 opacity-40 hover:opacity-70'
-                }`}
-                style={{
-                  backgroundColor: '#A37E62',
-                }}
-              />
-            ))}
           </div>
         </div>
       </div>
