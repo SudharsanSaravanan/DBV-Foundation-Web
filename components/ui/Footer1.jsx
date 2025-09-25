@@ -121,13 +121,13 @@ const Footer = () => {
                     className="text-gray-400 text-xs uppercase tracking-wider mb-1 font-light"
                     style={{ fontFamily: "var(--font-cantata)" }}
                   >
-                    Registration No.
+                    PAN 
                   </p>
                   <p 
                     className="text-gray-300 font-light group-hover:text-white transition-colors duration-300"
                     style={{ fontFamily: "var(--font-cantata)" }}
                   >
-                    TN/2014/0123456
+                    AAATD7407J
                   </p>
                 </div>
                 
@@ -136,13 +136,13 @@ const Footer = () => {
                     className="text-gray-400 text-xs uppercase tracking-wider mb-1 font-light"
                     style={{ fontFamily: "var(--font-cantata)" }}
                   >
-                    12A Registration
+                    Provisional Approval Number
                   </p>
                   <p 
                     className="text-gray-300 font-light group-hover:text-white transition-colors duration-300"
                     style={{ fontFamily: "var(--font-cantata)" }}
                   >
-                    AAABT1234C
+                    AAATD7407JF20214
                   </p>
                 </div>
                 
@@ -151,13 +151,13 @@ const Footer = () => {
                     className="text-gray-400 text-xs uppercase tracking-wider mb-1 font-light"
                     style={{ fontFamily: "var(--font-cantata)" }}
                   >
-                    80G Registration
+                    Document Identification Number
                   </p>
                   <p 
                     className="text-gray-300 font-light group-hover:text-white transition-colors duration-300"
                     style={{ fontFamily: "var(--font-cantata)" }}
                   >
-                    AAABT1234CF20214
+                    AAATD7407JF2021401
                   </p>
                 </div>
               </div>
