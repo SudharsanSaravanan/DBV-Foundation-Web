@@ -123,7 +123,7 @@ const Header = () => {
             }`}></div>
             {isMenuOpen ? (
               <X size={24} className={`relative z-10 transition-colors duration-300 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+                isScrolled ? 'text-gray-700' : 'text-gray-700'
               }`} />
             ) : (
               <Menu size={24} className={`relative z-10 transition-colors duration-300 ${
