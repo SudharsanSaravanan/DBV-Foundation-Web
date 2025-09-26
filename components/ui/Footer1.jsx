@@ -27,7 +27,7 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center mb-6 gap-3">
-                <div className="w-14 h-14 relative group">
+                {/* <div className="w-14 h-14 relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#A37E62] to-[#C49E75] rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                   <Image
                     src="/logo-dbv.png"
@@ -35,7 +35,7 @@ const Footer = () => {
                     fill
                     className="object-contain relative z-10"
                   />
-                </div>
+                </div> */}
                 <div className="flex flex-col">
                   <span 
                     className="text-2xl font-light tracking-wide text-white"

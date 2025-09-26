@@ -27,7 +27,7 @@ export default function Home() {
         {/* Main Loader Container */}
         <div className="text-center">
           {/* Logo Container */}
-          <div className="relative mb-1">
+          {/* <div className="relative mb-1">
             <div className="w-24 h-24 mx-auto flex items-center justify-center">
               <img
                 src="/logo-dbv.png"
@@ -35,7 +35,7 @@ export default function Home() {
                 className="w-16 h-16 object-contain"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Text Content */}
           <div className="space-y-3">

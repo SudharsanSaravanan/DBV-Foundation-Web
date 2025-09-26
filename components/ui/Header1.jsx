@@ -42,7 +42,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo + Site Name */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 relative transition-transform duration-300 group-hover:scale-110">
+            {/* <div className="w-12 h-12 relative transition-transform duration-300 group-hover:scale-110">
               <div className="absolute inset-0 bg-gradient-to-br from-[#A37E62] to-[#67391C] rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
               <Image
                 src="/logo-dbv.png"
@@ -50,7 +50,7 @@ const Header = () => {
                 fill
                 className="object-contain relative z-10"
               />
-            </div>
+            </div> */}
             <div className="flex flex-col">
               <span
                 className={`text-xl font-light tracking-wide transition-colors duration-300 ${
