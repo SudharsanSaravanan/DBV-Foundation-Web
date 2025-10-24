@@ -52,6 +52,9 @@ export const metadata = {
   alternates: {
     canonical: 'https://dbvfoundation.in',
   },
+  verification: {
+    google: 'ytKxYu74J_fwcKm8vevagtbg6rl2Zxe0FDFLleNE81k',
+  },
 }
 
 export default function RootLayout({ children }) {
