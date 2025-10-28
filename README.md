@@ -1,7 +1,29 @@
-# DBV Foundation:
+# 🌿 DBV Foundation
 
-DBV Foundation is a trust based in Coimbatore committed to serving people in need. The foundation works to provide food for the underprivileged, support children’s education, and engage in various community service activities that bring positive change and uplift lives.
+**DBV Foundation** is a charitable trust based in **Coimbatore**, dedicated to **serving communities in need**.
+Our mission is to make a meaningful difference through compassion, service, and sustainable impact.
 
-# Moo With Us:
+We focus on:
 
-Moo With Us is an NGO initiative under DBV Foundation dedicated to the care and welfare of cows. The initiative focuses on compassion, protection, and creating awareness about the cultural and social importance of cows in our communities.
+* Providing **food and essentials** for the underprivileged.
+* Supporting **education** for children in need.
+* Engaging in **community service** that uplifts and empowers lives.
+
+Together, we strive to create a kinder, more inclusive world — one small act of care at a time.
+
+---
+
+## 🐄 Moo With Us
+
+**Moo With Us** is an NGO initiative under **DBV Foundation**, focused on the **care and welfare of cows**.
+The initiative promotes compassion, protection, and awareness about the **cultural and social significance** of cows in our communities.
+
+Our work includes:
+
+* Providing safe shelters and medical care for cows.
+* Promoting ethical awareness and responsible care.
+* Encouraging community participation in animal welfare.
+
+---
+
+<p align="center">Made with ❤️ by <a href="https://github.com/Code-and-Commerce" target="_blank">Code & Commerce</a></p>
