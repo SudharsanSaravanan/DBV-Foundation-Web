@@ -57,7 +57,8 @@ const Footer = () => {
                 className="text-gray-200 leading-relaxed font-light mb-6 max-w-md"
                 style={{ fontFamily: 'var(--font-cantata)', lineHeight: '1.7' }}
               >
-                Empowering communities through compassion, education, and animal welfare. Join us in creating a brighter future with Moo With Us and DBV Foundation.
+                Empowering communities through compassion, education, and animal welfare. Join us in creating a brighter
+                future with Moo With Us and DBV Foundation.
               </p>
 
               {/* Decorative Line */}
@@ -145,7 +146,7 @@ const Footer = () => {
                     className="text-gray-200 font-light group-hover:text-white transition-colors duration-300"
                     style={{ fontFamily: 'var(--font-cantata)' }}
                   >
-                    AAATD7407JE20214 
+                    AAATD7407JE20214
                   </p>
                 </div>
 
@@ -170,20 +171,43 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="border-t border-gradient-to-r from-transparent via-[#A37E62]/30 to-transparent pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              {/* Copyright */}
-              <div className="text-center md:text-left">
+              
+              {/* Copyright + Made With Love */}
+              <div className="flex flex-col md:flex-row items-center text-center md:text-left md:space-x-2">
                 <p
                   className="text-gray-300 font-light text-sm"
                   style={{ fontFamily: 'var(--font-cantata)' }}
                 >
                   © 2025 Moo With Us & DBV Foundation. All rights reserved.
                 </p>
+                <span className="hidden md:inline text-gray-500">|</span>
                 <p
-                  className="text-gray-400 font-light text-xs mt-1"
+                  className="text-gray-400 font-light text-sm mt-1 md:mt-0"
                   style={{ fontFamily: 'var(--font-cantata)' }}
                 >
-                  Built with compassion for community impact.
+                  Made with ❤️ by{' '}
+                  <a
+                    href="https://github.com/Code-and-Commerce"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-[#A37E62] underline transition-colors duration-300"
+                  >
+                    Code & Commerce
+                  </a>
                 </p>
+              </div>
+
+              {/* Active Impact Badge */}
+              <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span
+                    className="text-gray-300 text-xs font-light tracking-wide"
+                    style={{ fontFamily: 'var(--font-cantata)' }}
+                  >
+                    Active Impact
+                  </span>
+                </div>
               </div>
             </div>
 
