@@ -146,14 +146,6 @@ const HeroBanner = () => {
           />
         ))}
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 right-8 z-20">
-        <div className="flex flex-col items-center space-y-2">
-          <div className="w-px h-8 bg-gradient-to-b from-white/60 to-transparent animate-pulse"></div>
-          <div className="w-1 h-1 bg-white/60 rounded-full animate-bounce"></div>
-        </div>
-      </div>
     </section>
   )
 }
