@@ -27,7 +27,7 @@ Our work includes:
 ## Google PageSpeed Insights Report (Post Indexing)
 ![SEO   Speed Test](https://github.com/user-attachments/assets/2170ac86-41aa-4deb-b04b-00a82db0f81c)
 
-After the website was indexed by Google, the performance audit for **[www.dbvfoundation.in](https://dbvfoundation.in/)** was conducted using **Google PageSpeed Insights**.
+After the website was indexed by Google, the performance audit for **[dbvfoundation.in](https://dbvfoundation.in/)** was conducted using **Google PageSpeed Insights**.
 The results demonstrate excellent optimization and compliance with modern web standards:
 
 * **Performance:** 100/100
