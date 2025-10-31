@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: {
     default: 'DBV Foundation - Coimbatore',
-    template: '%s | DBV Foundation'
+    template: '%s | DBV Foundation',
   },
   description:
     'DBV Foundation is a non-profit organization based in Coimbatore, India, dedicated to empowering communities through education, healthcare, and sustainable development initiatives.',
@@ -19,7 +19,7 @@ export const metadata = {
     'Education support',
     'Community development',
     'Healthcare projects',
-    'Social service'
+    'Social service',
   ],
   metadataBase: new URL('https://dbvfoundation.in'),
   openGraph: {
@@ -47,7 +47,8 @@ export const metadata = {
     images: ['/og-image.png'],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: { url: '/favicon.ico', sizes: '64x64', type: 'image/x-icon' },
+    apple: '/favicon.ico',
   },
   alternates: {
     canonical: 'https://dbvfoundation.in',
@@ -61,7 +62,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        {/* ✅ Single favicon (64x64 .ico) */}
+        <link rel="icon" href="/favicon.ico" sizes="64x64" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
